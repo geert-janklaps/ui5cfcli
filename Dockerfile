@@ -3,7 +3,7 @@ LABEL maintainer="Geert-Jan Klaps"
 LABEL version="1.0"
 
 # Install required packages for next installs
-RUN apt-get update && apt-get install -y wget gnupg2 curl
+RUN apt-get update && apt-get install -y wget gnupg2 curl chromium-browser
 
 # Install Cloud Foundry CLI
 RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
