@@ -30,9 +30,5 @@ RUN npm install npm@latest -g
 # Run cleanup
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Create user
-RUN adduser -uid 0 -gid 0 cicduser
-USER cicduser
-
 # Run command line
 CMD /bin/bash
