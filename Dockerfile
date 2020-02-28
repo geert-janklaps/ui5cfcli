@@ -6,7 +6,7 @@ LABEL version="1.0"
 RUN apt-get update && apt-get install -y wget gnupg2 curl chromium-browser
 
 # Set chrome environment variable for karma tests
-ENV CHROME_BIN "/usr/bin/chromium-browser --no-sandbox"
+ENV CHROME_BIN /usr/bin/chromium-browser
 
 # Install Cloud Foundry CLI
 RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
