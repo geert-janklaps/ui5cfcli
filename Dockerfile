@@ -31,7 +31,7 @@ RUN npm install npm@latest -g
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create user
-RUN adduser -ou 0 -g 0 cicduser
+RUN adduser -gid 0 cicduser
 USER cicduser
 
 # Run command line
