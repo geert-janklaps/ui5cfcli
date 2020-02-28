@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y cf7-cli
 
 # Setup alias for CF7 command
 RUN echo "alias cf='cf7'" >> ~/.bashrc
+RUN echo -e '#!/bin/bash\ncf7' > /usr/bin/cf && chmod +x /usr/bin/hi
 
 # Install community repository and MTA plugin
 RUN cf7 add-plugin-repo CF-Community https://plugins.cloudfoundry.org
